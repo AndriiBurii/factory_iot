@@ -33,7 +33,8 @@ flowchart LR
 - **Frontend:** React + TypeScript + Recharts + React-Toastify
   - Real-time graphs updating automatically without polling.
   - Instant Toast alerts when an anomaly is detected (e.g., Mule Sauce overheating).
-- **Databases:** \* **PostgreSQL:** Relational data storage for anomaly logs (accessed via GORM).
+- **Databases:**
+  - **PostgreSQL:** Relational data storage for anomaly logs (accessed via GORM).
   - **Redis:** Key-value store for hot, high-throughput machine metrics.
 - **Infrastructure:** Docker & Docker Compose
   - Fully containerized multi-container setup.
