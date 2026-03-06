@@ -11,13 +11,13 @@ I built this specific dashboard to showcase my hands-on experience with **Go, Re
 ## System Architecture
 
 ```mermaid
-graph LR
+flowchart LR
     Sim[Production Simulator] -->|Generates metrics| Backend[Go Backend]
 
     Backend <-->|Live metrics cache| Redis[(Redis)]
     Backend -->|Saves anomalies| DB[(PostgreSQL)]
 
-    Backend == WebSockets ==>|Pushes real-time alerts| UI[React Frontend]
+    Backend ==>|WebSockets: Pushes live alerts| UI[React Frontend]
 
     UI -->|Queries historical logs| GQL[GraphQL API]
     GQL --> DB
